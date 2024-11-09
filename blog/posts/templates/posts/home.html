@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Home Page</title>
+</head>
+<body>
+    <!-- <h1>Welcome - {{posts}}</h1> -->
+    <h1>{{username}}</h1>
+    {% for post in posts %} 
+        <a href=""><h1>{{forloop.counter}} - {{post.title}}</h1></a>
+        <p>{{post.content}}</p>
+    {% empty %}
+        <h1>No posts available</h1>
+    {% endfor %}
+
+
+</body>
+</html>
